@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Home from "./components/home/Home";
+import Question from "./components/question/Question";
+import { MathJaxContext } from "better-react-mathjax";
+import {DataProvider} from "./DataContext"
+import {Route,Routes} from "react-router-dom";
+import Final from "./components/final/Final";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <DataProvider>
+      <MathJaxContext>
+        <div className="App">
+          
+        <Routes>
+          <Route exact path="/" element={<Home/>}/>
+          <Route exact path="/quiz" element={<Question/>}/>
+          <Route exact path="/final" element={<Final/>}/>
+        </Routes>
+
+
+        </div>
+      </MathJaxContext>
+    </DataProvider>
   );
 }
 

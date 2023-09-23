@@ -1,0 +1,85 @@
+$myColor: #bbff00c0;
+
+.home{
+    height: 100vh;
+    width: 100%;
+    color: black;
+    .home_nav{
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        padding-left: 100px;
+        border-bottom: 2px solid grey;
+    }
+    .home_body{
+        height: 90vh;
+        width: 100%;
+        display: flex;
+        .home_body_left{
+            flex: 0.5;
+            height: 90vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            padding-left: 100px;
+            align-items: flex-start;
+            justify-content: center;
+            border-right: 2px solid grey;
+            .home_input{
+                display: flex;
+                gap: 40px;
+                align-items: center;
+                // justify-content: center;
+               input{
+                width: 15rem;
+                height: 1.5rem;
+                border-radius: 5px;
+                border: 3px solid black;
+                padding: 5px;
+                font-size: 18px;
+                font-weight: 400;
+
+               }
+               button{
+                background-color:$myColor;
+                border: 3px solid black;
+                width: 5rem;
+                height: 2.5rem;
+                font-size:20px;
+                font-weight: 700;
+                border-radius: 10px ;
+                cursor: pointer;
+                &:hover{
+                    background-color:#cfff4bc0;
+                }
+               }
+            }
+
+        }
+        .home_body_right{
+            flex: 0.5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+    }
+}
+@media all  and (max-width: 500px){
+    .home_body{
+        flex-direction: column;
+        .home_body_left{
+            h1{
+                font-size: 30px;
+            }
+        }
+
+    }
+
+
+}
